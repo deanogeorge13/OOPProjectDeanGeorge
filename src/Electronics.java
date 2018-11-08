@@ -1,18 +1,12 @@
-public class Vehicle {
-    private int seats;
+public class Electronics {
     private String type;
     private double cost;
+    private
 
-    public Vehicle(int seats, String type, double cost)
+    public Electronics( String type, double cost)
     {
-        setSeats(seats);
         setType(type);
         setCost(cost);
-    }
-
-    public void setSeats(int seats)
-    {
-        this.seats = seats;
     }
 
     public void setType(String type)
@@ -23,11 +17,6 @@ public class Vehicle {
     public void setCost(double cost)
     {
         this.cost = cost;
-    }
-
-    public int getSeats()
-    {
-        return seats;
     }
 
     public String getType()
