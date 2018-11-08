@@ -1,7 +1,7 @@
 public class Electronics {
     private String type;
     private double cost;
-    private
+
 
     public Electronics( String type, double cost)
     {
