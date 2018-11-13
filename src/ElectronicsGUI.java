@@ -3,16 +3,23 @@ import java.awt.*;
 
 public class ElectronicsGUI extends JFrame {
 
-
-    Image image;
+    //private ImageIcon imageIcon;
 
     public ElectronicsGUI()
     {
         setSize(700,500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        FlowLayout flowLayout = new FlowLayout();
-        setLayout(flowLayout);
+        GridLayout gridLayout = new GridLayout(3,3,50,20);
+        setLayout(gridLayout);
+
+        JPanel jPanel = new JPanel();
+        add(jPanel);
+        JPanel jPanel1 = new JPanel();
+        add(jPanel1);
+        JPanel jPanel2 = new JPanel();
+        add(jPanel2);
+
 
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
@@ -36,22 +43,25 @@ public class ElectronicsGUI extends JFrame {
         menu2.add(search2);
         menu2.add(compare2);
 
-        JLabel imageLabel = new JLabel("test", JLabel.CENTER);
-
-        imageLabel.setIcon(new ImageIcon(getClass().getResource("electronicStore.png")));
-        //Image newImage = imageLabel.getScaledInstance(20,20, Image.SCALE_DEFAULT);
-        Icon image = new ImageIcon("electronicStore.png", "test");
-        add(imageLabel);
-
         JLabel label = new JLabel("Electronics Store");
-        add(label);
+        jPanel.add(label);
+
+        ImageIcon imageIcon = new ImageIcon(getClass().getResource("electronicStore.png"));
+        Image img = imageIcon.getImage();
+        Image newimg = img.getScaledInstance(150,150, Image.SCALE_SMOOTH);
+        imageIcon = new ImageIcon(newimg);
+
+        JLabel imageLabel = new JLabel(imageIcon);
+        jPanel1.add(imageLabel);
+
+
 
         JButton button = new JButton("Computers");
         JButton button1 = new JButton("Consoles");
         JButton button2 = new JButton("Displays");
-        add(button);
-        add(button1);
-        add(button2);
+        jPanel2.add(button);
+        jPanel2.add(button1);
+        jPanel2.add(button2);
         button.setPreferredSize(new Dimension(100, 40));
         button1.setPreferredSize(new Dimension(100, 40));
         button2.setPreferredSize(new Dimension(100, 40));
@@ -63,5 +73,7 @@ public class ElectronicsGUI extends JFrame {
     public static void main(String[] args) {
         ElectronicsGUI gui = new ElectronicsGUI();
 
+
     }
+
 }
