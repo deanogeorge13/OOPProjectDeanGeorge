@@ -10,7 +10,8 @@ public class ElectronicsGUI extends JFrame {
         setSize(700,500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        GridLayout gridLayout = new GridLayout(3,3,50,20);
+        //Panels and setting layout
+        GridLayout gridLayout = new GridLayout(3,3,50,0);
         setLayout(gridLayout);
 
         JPanel jPanel = new JPanel();
@@ -20,7 +21,7 @@ public class ElectronicsGUI extends JFrame {
         JPanel jPanel2 = new JPanel();
         add(jPanel2);
 
-
+        //Menu bar
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
         JMenu menu = new JMenu("Computers");
@@ -30,6 +31,7 @@ public class ElectronicsGUI extends JFrame {
         menuBar.add(menu1);
         menuBar.add(menu2);
 
+        //Menu bar items
         JMenuItem search = new JMenuItem("Search");
         JMenuItem compare = new JMenuItem("Compare");
         JMenuItem search1 = new JMenuItem("Search");
@@ -46,9 +48,10 @@ public class ElectronicsGUI extends JFrame {
         JLabel label = new JLabel("Electronics Store");
         jPanel.add(label);
 
+        //Electronic store logo/image
         ImageIcon imageIcon = new ImageIcon(getClass().getResource("electronicStore.png"));
         Image img = imageIcon.getImage();
-        Image newimg = img.getScaledInstance(150,150, Image.SCALE_SMOOTH);
+        Image newimg = img.getScaledInstance(125,125, Image.SCALE_SMOOTH);
         imageIcon = new ImageIcon(newimg);
 
         JLabel imageLabel = new JLabel(imageIcon);
@@ -56,6 +59,7 @@ public class ElectronicsGUI extends JFrame {
 
 
 
+        //Shortcut buttons
         JButton button = new JButton("Computers");
         JButton button1 = new JButton("Consoles");
         JButton button2 = new JButton("Displays");
