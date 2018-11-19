@@ -11,7 +11,7 @@ public class Computers {
         this.RAM = RAM;
         this.CPU = CPU;
         this.GPU = GPU;
-        Storage = storage;
+        this.Storage = storage;
         this.USB = USB;
         this.operatingSystem = operatingSystem;
         this.opticalDrive = opticalDrive;

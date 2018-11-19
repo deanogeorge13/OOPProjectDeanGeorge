@@ -7,16 +7,18 @@ public class Displays {
     private String displayType;
     private String USB;
     private String Thickness;
+    private String aspectRatio;
 
-    public Displays(String size, String resolution, String refreshRate, String responseTime, String videoInputs, String displayType, String USB, String thickness) {
-        this.Size = size;
-        this.Resolution = resolution;
+    public Displays(String size, String resolution, String refreshRate, String responseTime, String videoInputs, String displayType, String USB, String thickness, String aspectRatio) {
+        Size = size;
+        Resolution = resolution;
         this.refreshRate = refreshRate;
         this.responseTime = responseTime;
         this.videoInputs = videoInputs;
         this.displayType = displayType;
         this.USB = USB;
         this.Thickness = thickness;
+        this.aspectRatio = aspectRatio;
     }
 
     public String getSize() {
@@ -83,6 +85,14 @@ public class Displays {
         this.Thickness = thickness;
     }
 
+    public String getAspectRatio() {
+        return aspectRatio;
+    }
+
+    public void setAspectRatio(String aspectRatio) {
+        this.aspectRatio = aspectRatio;
+    }
+
     @Override
     public String toString() {
         return "Displays{" +
@@ -94,6 +104,7 @@ public class Displays {
                 ", displayType='" + displayType + '\'' +
                 ", USB='" + USB + '\'' +
                 ", Thickness='" + Thickness + '\'' +
+                ", aspectRatio='" + aspectRatio + '\'' +
                 '}';
     }
 }
