@@ -1,4 +1,6 @@
-public class Computers {
+import java.io.Serializable;
+
+public class Computers extends Product implements Serializable {
     private String RAM;
     private String CPU;
     private String GPU;

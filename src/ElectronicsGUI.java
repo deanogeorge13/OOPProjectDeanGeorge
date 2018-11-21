@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ElectronicsGUI extends JFrame {
 
@@ -7,6 +9,10 @@ public class ElectronicsGUI extends JFrame {
 
     public ElectronicsGUI()
     {
+        //retrieve arraylist of products from file on disk
+        //ideally, you'd have menu options to be able to add a new product and then click off from a submenu the
+        //particular type of product you want to add i.e. Computer, Console or Display
+
         setSize(700,500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -70,9 +76,17 @@ public class ElectronicsGUI extends JFrame {
         button1.setPreferredSize(new Dimension(100, 40));
         button2.setPreferredSize(new Dimension(100, 40));
 
-
         setVisible(true);
+
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Consoles.createConsoles();
+                JOptionPane.showMessageDialog(null, Consoles.getAllConsoles());
+            }
+        });
     }
+
 
 
 
